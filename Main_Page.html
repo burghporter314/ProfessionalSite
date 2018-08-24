@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dylan's Website</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  body {
+    padding:0px;
+  }
+
+  </style>
+  </head>
+  <body style="">
+
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">Attention</h4>
+			</div>
+			<div class="modal-body">
+			  <p>This site is only meant for potential employers, family, or friends -- If this 
+			  does not describe you, please exit the site. The site is also still under maintence 
+			  -- so there may be broken links. Thank you for your visiting my site!</p>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	  
+	</div>
+
+    <nav class="navbar navbar-inverse" style="z-index:16; border-radius:0px;margin-bottom:0px;" data-spy="affix" data-offset-top="197" style="margin-bottom:10px;">
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Home Page</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Programs for...<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#osstart">Operating Systems</a></li>
+                <li><a href="#adsstart">Advanced Data Structures</a></li>
+              </ul>
+            </li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Papers.html">Writing Samples</a></li>
+			<li><a href="Programs.html">Program Samples</a></li>
+            </ul>
+	  	  <!--
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		  </ul>-->
+        </div>
+      </div>
+    </nav>
+    <!--Slideshow-->
+    <div class="container-fluid" style="padding:0px;">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel" style = "margin:0px;">
+        <!-- Indicators -->
+        <ol class="carousel-indicators" style = "opacity:0;" >
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+		  <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="">
+
+
+          <div class="item active">
+            <img src="Images/pic20.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>New Project</h3>
+              <p>Introducing: Compiler for C++ (Available Below)</p>
+              <!--<a href="#accordion0"> <button type="button" class="btn btn-default btn-sm">Learn More</button> </a>-->
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Images/pic15.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Software Engineering</h3>
+              <p>Expert Experience in Development and Innovation</p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Images/pic1.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Cyber Security</h3>
+              <p>Experience in PHP, SQL, and more</p>
+            </div>
+          </div>
+    
+          <div class="item">
+            <img src="Images/pic3.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Android Apps</h3>
+              <p>Providing mobile solutions to simple problems like Home Security</p>
+            </div>
+          </div>
+		  
+          <div class="item">
+            <img src="Images/pic2.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Windows</h3>
+              <p>RSA Encryption and other Protocol Programs</p>
+            </div>
+          </div>
+		  
+        </div>
+
+
+      </div>
+    </div>
+    <br />
+
+	<!--Arbitrary Alerts-->
+	
+	<div class="container" style="text-align:center;">
+	  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Click to see Alerts</button>
+	  <div id="demo" class="collapse">
+	  <br />
+        <div class="alert alert-success">
+          <strong>Another Perfect Semester!</strong> Sixth Semester Grades are in and I got another 4.0!
+        </div>
+        <div class="alert alert-warning">
+          <strong>Computer Science Internship!</strong> I have accepted an internship opportunity for UPMC!
+        </div>
+        <div class="alert alert-info">
+          <strong>Computer Science Internship!</strong> I have accepted an internship opportunity for the IT Department at C.O.R.E.!
+        </div>
+        <div class="alert alert-success">
+          <strong>Grades are in!</strong> Check below for my latest 4th Semester Grades!
+        </div>
+        <div class="alert alert-info">
+          <strong>Operating Systems Programs Added!</strong> Be sure to check out Barbershop and HammingCode!
+        </div>
+        <div class="alert alert-warning">
+          <strong>Deans List!</strong> I have officially made the Dean's list for the 4th Semester!
+        </div>
+        <div class="alert alert-danger">
+          <strong>Perfect 4.0!</strong> Second Semester Grades are in -- and they are 4.0 Perfect!
+        </div>
+	  </div>
+	</div>
+	<br />
+
+    <!-- Left-aligned media object -->
+    <div class = "container">
+      <div class="media">
+        <div class="media-left">
+          <img src="Images/img_avatar1.png" class="media-object" style="width:60px;margin-bottom:10px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="">On track for Summa Cum Laude?</h4>
+          <p style = "">After 3 years at Duquesne University, I still maintain a 3.83 GPA with 10 Computer Science Classes Completed!</p>
+		</div>
+      </div>
+    </div>	
+	
+	
+    <!-- Grades Display -->
+	
+
+
+
+	<div class="container">
+      <div class="panel-group " id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading" >
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapsegradecol">Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapsegradecol" class="panel-collapse collapse in">
+            <div class="panel-body">Click below to see my semester grades at Duquesne University</div>
+          </div>
+        </div>
+
+
+<div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse6thsem">6th Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse6thsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+			  	  <tr>
+			 	    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+
+			   	  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Computer Science Tools</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Web-Based Systems</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Entrepreneurship</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Business Information Systems</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Differential Equations</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <thead class = "bg-success">
+				    <tr>
+					  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-info">
+					  <td>5</td>
+					  <td>15</td>
+					  <td>4.0</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+
+
+<div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse5thsem">5th Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse5thsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+			  	  <tr>
+			 	    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+
+			   	  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Systems Programming and Design</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Theory of Prog. Languages</td>
+				    <td>3</td>
+				    <td>B</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Introduction to Marketing</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Introduction to Management</td>
+				    <td>3</td>
+				    <td>A-</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Physics I</td>
+				    <td>3</td>
+				    <td>B</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Physics Lab</td>
+				    <td>1</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Advanced Honors I</td>
+				    <td>-</td>
+				    <td>H</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Honors Research</td>
+				    <td>-</td>
+				    <td>H</td>
+				  </tr>
+				  <thead class = "bg-info">
+				    <tr>
+					  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-success">
+					  <td>8</td>
+					  <td>16</td>
+					  <td>3.57</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+
+
+
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse4thsem">4th Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse4thsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+				  <tr>
+				    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+				  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Operating Systems</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Numerical Analysis</td>
+				    <td>4</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Calculus III</td>
+				    <td>3</td>
+				    <td>B</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Honors Philosophy</td>
+				    <td>3</td>
+				    <td>A-</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Honors Social Justice</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Honors Research</td>
+				    <td>-</td>
+				    <td>H</td>
+				  </tr>
+				  <thead class = "bg-info">
+				    <tr>
+				  	  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-success">
+					  <td>6</td>
+					  <td>16</td>
+					  <td>3.77</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3rdsem">3rd Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse3rdsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+			  	  <tr>
+			 	    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+
+			   	  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Advanced Data Structures</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Calculus II</td>
+				    <td>4</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Computer Org & Assem Lang</td>
+				    <td>3</td>
+				    <td>B</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Public Speaking</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>New Media Production</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <thead class = "bg-info">
+				    <tr>
+					  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-success">
+					  <td>5</td>
+					  <td>16</td>
+					  <td>3.81</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2ndsem">2nd Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse2ndsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+			  	  <tr>
+			 	    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+
+			   	  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Java w/ Data Structures</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Calculus I</td>
+				    <td>4</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Environmental History</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Survey of Sociology</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Imaginative Lit & Crit Writing</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <thead class = "bg-success">
+				    <tr>
+					  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-info">
+					  <td>5</td>
+					  <td>16</td>
+					  <td>4.0</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1stsem">1st Semester Grades</a>
+            </h4>
+          </div>
+          <div id="collapse1stsem" class="panel-collapse collapse">
+            <div class="panel-body" style="padding:0px;">
+			  <table class="table" style="margin:0px;">
+			    <thead class = "bg-info">
+			  	  <tr>
+			 	    <th>Class</th>
+				    <th>Credits</th>
+				    <th>Grade</th>
+
+			   	  </tr>
+			    </thead>
+			    <tbody>
+				  <tr class="bg-info">
+				    <td>Scientific Programming w/ Java</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Discrete Mathematics</td>
+				    <td>3</td>
+				    <td>A-</td>
+				  </tr>
+				  <tr class="bg-success">
+				    <td>Ethics</td>
+				    <td>3</td>
+				    <td>A-</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Thinking and Writing Across Curriculum</td>
+				    <td>3</td>
+				    <td>A</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Theological Ethics</td>
+				    <td>3</td>
+				    <td>A-</td>
+				  </tr>
+				  <tr class="bg-info">
+				    <td>Research and Info Skills</td>
+				    <td>1</td>
+				    <td>A</td>
+				  </tr>
+				  <thead class = "bg-info">
+				    <tr>
+					  <th>Classes</th>
+					  <th>Credits</th>
+					  <th>GPA</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr class="bg-success">
+					  <td>6</td>
+					  <td>16</td>
+					  <td>3.83</td>
+				    </tr>
+				  </tbody>
+			    </tbody>
+			  </table>
+			</div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+<!-- Left-aligned media object -->
+    <div class = "container"  id="osstart">
+      <div class="media">
+        <div class="media-left">
+          <img src="Images/img_avatar1.png" class="media-object" style="width:60px; margin-bottom:10px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="">Finally, I have completed my C++ Compiler!</h4>
+          <p style = "">The Project Includes five phases: Lexical Analysis, Parsing, Intermediate Code Generation, Code Optimization, and Code Generation. </p>
+        </div>
+      </div>
+    </div>	
+	
+	<!-- Systems Programming Compiler -->
+	
+	<div class="container">
+      <div class="panel-group " id="accordion0">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion0" href="#collapseprogcol0">C++ Compiler Files</a>
+            </h4>
+          </div>
+          <div id="collapseprogcol0" class="panel-collapse collapse in">
+            <div class="panel-body">
+Here are all relevant files for my C++ Compiler: <a target="_new" href="Files/SystemsProgramming/Compiler/Compiler.java">Compiler.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/LexicalAnalyzer.java">LexicalAnalyzer.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/Parser.java">Parser.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/ParserPhaseTwo.java">ParserPhaseTwo.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/Compile.java">Compile.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/LinearProbingHashST.java">LinearProbingHashST.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/ParseTree.java">ParseTree.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/Queue.java">Queue.java</a>, 
+<a target="_new" href="Files/SystemsProgramming/Compiler/LexObject.java">LexObject.java</a>
+          </div>
+          </div>
+
+        </div>
+        </div>
+      </div> 
+    </div>
+
+    <!-- Left-aligned media object -->
+    <div class = "container"  id="osstart">
+      <div class="media">
+        <div class="media-left">
+          <img src="Images/img_avatar1.png" class="media-object" style="width:60px; margin-bottom:10px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="">How did I get an 'A' in Operating Systems?</h4>
+          <p style = "">In a class where 90% of the students score below an A, I showed efficiency and innovation in my programming assignments to put me over the top.</p>
+        </div>
+      </div>
+    </div>	
+	
+	<!-- Operating Systems Programs -->
+	
+	<div class="container">
+      <div class="panel-group " id="accordion2">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapseprogcol">Operating Systems Programs</a>
+            </h4>
+          </div>
+          <div id="collapseprogcol" class="panel-collapse collapse in">
+            <div class="panel-body">Here are two programs from my Operating Systems class. Included are the programs <a target="_new" href="Files/OSPrograms/Barbershop/BarberShop.java">Barbershop.java</a> and <a target="_new" href="Files/OSPrograms/Hamming/Hamming.java">HammingCode.java</a></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapsebarber">Barbershop</a>
+            </h4>
+          </div>
+          <div id="collapsebarber" class="panel-collapse collapse">
+            <div class="panel-body">The Barbershop program, per Wikipedia, is a classic inter-process communication 
+		    and synchronization problem between multiple operating system processes. The problem is analogous 
+		    to that of keeping a barber working when there are customers, resting when there are none, and doing
+		    so in an orderly manner. Code: <a target="_new" href="Files/OSPrograms/Barbershop/BarberShop.java">BarberShop.java</a>,
+			<a target="_new" href="Files/OSPrograms/Barbershop/Barber.java">Barber.java</a>,
+			<a target="_new" href="Files/OSPrograms/Barbershop/Customer.java">Customer.java</a>,
+			<a target="_new" href="Files/OSPrograms/Barbershop/TestCustomer.java">TestCustomer.java</a></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapsehamming">Hamming Code</a>
+            </h4>
+          </div>
+          <div id="collapsehamming" class="panel-collapse collapse">
+            <div class="panel-body">This program's purpose was in the field of error detection. With the concept of RAID
+		     storage backup, hamming code provides a way to detect an error through the use of syndrome bits. Say, for example,
+		     a bit was wrongly flipped through a data writing process, this program could detect such an error and write the corrected
+		     byte to memory. Additionally, the program can detect the occurence of more than one error. It cannot, however, fix such a
+	    	 problem. Code: <a target="_new" href="Files/OSPrograms/Hamming/Hamming.java">Hamming.java</a></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+	
+    <!-- Left-aligned media object -->
+    <div class = "container"  id="adsstart">
+      <div class="media">
+        <div class="media-left">
+          <img src="Images/img_avatar1.png" class="media-object" style="width:60px; margin-bottom:10px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="">Advanced Data Structures: The Hardest Class Yet.</h4>
+          <p style = "">In ADS, we learned about algorithm enhancement, efficiency, computational geometry, and graphs. Luckily, I received an 'A' for the course.</p>
+        </div>
+      </div>
+    </div>	
+	
+	<!-- ADS Programs -->
+	
+	<div class="container">
+      <div class="panel-group " id="accordion3">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion3" href="#collapseprogadscol">Advanced Data Structures' Programs</a>
+            </h4>
+          </div>
+          <div id="collapseprogadscol" class="panel-collapse collapse in">
+            <div class="panel-body">Here are three programs from my Advanced Data Structures' Class. Included are the programs <a target="_new" href="Files/ADSPrograms/Assignment3/QuickSortNinther.java">QuickSortNinther.java</a> (Programmatic Modification), <a target="_new" href="Files/ADSPrograms/Assignment4/SplayBST.java">SplayBST.java</a>,  and <a target="_new" href="Files/ADSPrograms/Assignment6/BreadthFirstDirectedPaths.java">BreadthFirstDirectedPaths.java</a></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion3" href="#collapseninther">QuickSortNinther</a>
+            </h4>
+          </div>
+          <div id="collapseninther" class="panel-collapse collapse">
+            <div class="panel-body"> Per wikipedia, Quicksort (sometimes called partition-exchange sort) is an efficient sorting algorithm, 
+			serving as a systematic method for placing the elements of an array in order. This algorithm has a Worst-case performance of O(n<sup>2</sup>),
+			while the Best-case scenario yields O(n log n) time complexity. Code: 
+			<a target="_new" href="Files/ADSPrograms/Assignment3/Assignment3.java">Assignment3.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment3/QuickSortNinther.java">QuickSortNinther.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment3/QuickNonShuffle.java">QuickNonShuffle.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment3/QuickShuffle.java">QuickShuffle.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment3/doc.xlsx">results.xlsx</a></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion3" href="#collapsesplay">SplayBST</a>
+            </h4>
+          </div>
+          <div id="collapsesplay" class="panel-collapse collapse">
+            <div class="panel-body">Per wikipedia, A splay tree is a self-adjusting binary search tree with the additional property that recently
+			accessed elements are quick to access again. It performs basic operations such as insertion, look-up and removal in O(log n) amortized time. 
+			Code: <a href="Files/ADSPrograms/Assignment4/Assignment4.java">Assignment4.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment4/SplayBST.java">SplayBST.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment4/RedBlackBST.java">RedBlackBST.java</a>,
+			<a target="_new" href="Files/ADSPrograms/Assignment4/Queue.java">Queue.java</a></div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+           <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion3" href="#collapsebreadth">BreadthFirstDirectedPaths</a>
+            </h4>
+          </div>
+          <div id="collapsebreadth" class="panel-collapse collapse">
+            <div class="panel-body">Per Sedgewick's website, this class represents a data type for finding shortest paths (number of edges) from a source
+            vertex (or set of source vertices) to every other vertex in the digraph. This implementation uses breadth-first search.
+			Code: <a target="_new" href="Files/ADSPrograms/Assignment6/BreadthFirstDirectedPaths.java">Breadth.java</a>,
+				  <a target="_new" href="Files/ADSPrograms/Assignment6/Digraph.java">Digraph.java</a></div>
+          </div>
+        </div>
+      </div> 
+    </div>
+	
+    <!-- Left-aligned media object -->
+    <div class = "container">
+      <div class="media">
+        <div class="media-left">
+          <img src="Images/img_avatar1.png" class="media-object" style="width:60px; margin-bottom:10px;">
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading" style="">Check out the stories Below!</h4>
+          <p style = "">These Stories are from the evllabs.com website, and they discuss my work with the role I play in EVL team as a Researcher.</p>
+        </div>
+      </div>
+    </div>	
+	
+	
+	<!--Important Articles-->
+    <div class="container-fluid" style="max-width:800px;">
+      <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel2" data-slide-to="1"></li>
+          <li data-target="#myCarousel2" data-slide-to="2"></li>
+		  <li data-target="#myCarousel2" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+          <div class="item active">
+            <img src="Images/pic16.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Stylometry & Trump</h3>
+              <p>What are the odds of a word match in Melania's Speech?</p>
+			  <a href="http://evllabs.com/?p=168">
+			  <button type="button" class="btn btn-info">Read More</button></a>
+			  <p></p>
+            </div>
+          </div>
+
+          <div class="item">
+            <img src="Images/pic10.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Rowling Authenticated</h3>
+              <p>JGAAP identifies Rowling as Cuckoo's Calling Author.</p>
+			  <a href="http://evllabs.com/?p=165">
+			  <button type="button" class="btn btn-info">Read More</button></a>
+			  <p></p>
+            </div>
+          </div>
+    
+          <div class="item">
+            <img src="Images/pic12.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Honest Abe</h3>
+              <p>Duquesne Students authenticate President Lincoln's Writings.</p>
+			  <a href="http://evllabs.com/?p=157">
+			  <button type="button" class="btn btn-info">Read More</button></a>
+			  <p></p>
+            </div>
+          </div>
+		  
+          <div class="item">
+            <img src="Images/pic11.jpg" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>Document Analysis</h3>
+              <p>Duquesne Continues to lead in Stylometry Analytics</p>
+			  <a href="http://evllabs.com/?p=137">
+			  <button type="button" class="btn btn-info">Read More</button></a>
+			  <p></p>
+            </div>
+          </div>
+		  
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel2" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+         </a>
+      </div>
+    </div>
+    <br />
+	
+	<!-- Container (Contact Section) -->
+	<div id="contact" class="container" style="color:black;">
+	  <h3 class="text-center">Contact</h3>
+	  <p class="text-center"><em></em></p>
+
+	  <div class="row">
+		<div class="col-md-4">
+		  <p><span class="glyphicon glyphicon-map-marker"></span> United States</p>
+		  <p><span class="glyphicon glyphicon-phone"></span> Phone: N/A</p>
+		  <p><span class="glyphicon glyphicon-envelope"></span> Email: zachchilders3141592@gmail.com</p>
+		</div>
+
+	  </div>
+	</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<!--
+	<script>
+	  $( document ).ready( function() {
+        $( '#myModal' ).modal( 'toggle' );
+      });
+    </script>
+	-->
+  </body>
+</html>

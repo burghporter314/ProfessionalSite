@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Dylan's Website</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <style>
+  .affix {
+      top: 0;
+      width: 100%;
+  }
+
+  .affix + .container-fluid {
+      padding-top: 70px;
+  }
+  body {
+    color:black;
+    padding:0px;
+  }
+  p {
+    margin-bottom:15px;
+  }
+  </style>
+  </head>
+  <body style="background-color:white;">
+
+
+    <nav class="navbar navbar-inverse" style="z-index:16; border-radius:0px;margin-bottom:-20px;" data-spy="affix" data-offset-top="197" >
+      <div class="container-fluid">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="#">Program Samples</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="Main_Page.html">Home</a></li>
+            <li><a href="Resume.html">Resume</a></li>
+            <li><a href="Papers.html">Writing Samples</a></li>
+			<li class="active"><a href="Programs.html">Program Samples</a></li>
+            </ul>
+	  	  <!--
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+		  </ul>-->
+        </div>
+      </div>
+    </nav>
+  
+<!-- Page Content -->
+	<br><br>
+    <div class="container">
+        <header class="jumbotron hero-spacer" style="padding:15px;">
+            <h1>Welcome!</h1>
+            <p>Scroll down to see some of my personal and professional programs!</p>
+            <p><a href="#featured" class="btn btn-primary btn-large">View Featured Program!</a>
+            </p>
+        </header>
+
+        <!-- /.row -->
+
+        <!-- Project One -->
+        <div class="row" id="featured">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="ProgrammingImages/img1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Messaging System w/ RSA Encryption</h3>
+                <h4>Personal Project</h4>
+                <p>Using the idea of RSA Encryption, I have developed a secure, java-based, application that can communicate, securely, with anybody in the United States.</p>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/MessagingRSA/ProgramSystem.java" >ProgramSystem.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/MessagingRSA/RSA.java" >RSA.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/MessagingRSA/ServerSQL.java" >ServerSQL.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Two -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="ProgrammingImages/img2.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Application Updater</h3>
+                <h4>Personal Project</h4>
+                <p>I have now added the ability for automatic updates on my applicational projects -- if the program detects an update, it will pull data remotely to replace any given file with its update.</p>
+                <a class="btn btn-primary" target="_new" href="Files/ProgramSamples/Updater/Updater.java" >Updater.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Three -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="ProgrammingImages/img3.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Twitter Data Mining</h3>
+                <h4>Research project</h4>
+                <p>This application can pull data from any public twitter account in the world. Through the API's methods, I have used this application to mine large data and make personality correlations via these mined accounts. Additionally, this application can auto-detect a language, and write a file system structure that is sorted accordingly.</p>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/TwitterDataMiner/TwitterMain.java" >TwitterMain.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/TwitterDataMiner/AccessRequest.java" >AccessRequest.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/TwitterDataMiner/ST.java" >SymbolTable.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/TwitterDataMiner/WebConnection.java" >WebConnection.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Project Four -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="#">
+                    <img class="img-responsive" src="ProgrammingImages/img4.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Android RSS Feed</h3>
+                <h4>Personal Project</h4>
+                <p>This Android app can pull data from sources like CNN, MSNBC, etc and display common news and headlines. Additionally, the user can follow the link to the displayed headline to gather more information about the story.</p>
+                <a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/AndroidRSS/MainActivity.java" >MainActivity.java<span class="glyphicon glyphicon-chevron-right"></span></a>
+				<a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/AndroidRSS/AppService.java" >AppService.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/AndroidRSS/Sound.java" >Sound.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+				<a class="btn btn-primary" style = "margin-bottom:5px;" target="_new" href="Files/ProgramSamples/AndroidRSS/TimeStampURL.java" >TimeStampURL.java <span class="glyphicon glyphicon-chevron-right"></span></a>
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+
+    </div>
+    <br />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
+</html>
