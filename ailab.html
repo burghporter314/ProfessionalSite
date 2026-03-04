@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,16 +110,14 @@
       <p>Upload your PDF requirement document to analyze its quality. The process may take up to 20 minutes depending on size.</p>
       <div id="pdfCard" class="pdf-card">Drag & drop a PDF here, or click to select a file</div>
 
-      <!-- Hidden iframe for download -->
-      <iframe name="hidden_iframe" id="hiddenIframe" style="display:none;"></iframe>
-
-      <form id="pdfForm" action="https://drdylanporter.com/arqm" method="POST" enctype="multipart/form-data" target="hidden_iframe">
+      <form id="pdfForm" action="https://drdylanporter.com/arqm" method="POST" enctype="multipart/form-data">
         <input type="file" name="files" id="pdfFile" accept="application/pdf" required>
-        <button type="submit" class="btn btn-primary btn-file"
-          onclick="status.innerHTML='<div class=\'spinner\'></div>Uploading and processing...';">Analyze File</button>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required class="form-control mt-2">
+
+        <button type="submit" class="btn btn-primary btn-file" id="submitBtn" disabled>Analyze File</button>
       </form>
 
-      <div id="status">Waiting for file...</div>
+      <div id="status"></div>
       <hr>
     </div>
   </div>
@@ -215,29 +214,76 @@
     }
   }
 
-  // PDF Drag & Drop
   const pdfCard = document.getElementById('pdfCard');
   const pdfInput = document.getElementById('pdfFile');
+  const emailInput = document.getElementById('email');
+  const submitBtn = document.getElementById('submitBtn');
   const status = document.getElementById('status');
-  const hiddenIframe = document.getElementById('hiddenIframe');
+  const pdfForm = document.getElementById('pdfForm');
 
+  // Enable submit button only when both file and valid email are present
+  function validateForm() {
+    const emailValid = emailInput.value.trim() !== "" && emailInput.checkValidity();
+    const fileSelected = pdfInput.files.length > 0;
+    submitBtn.disabled = !(emailValid && fileSelected);
+  }
+
+  // File input changes
+  pdfInput.addEventListener('change', () => {
+    if (pdfInput.files.length > 0) {
+      status.innerText = "File selected: " + pdfInput.files[0].name;
+      validateForm();
+    }
+  });
+
+  // Email input changes
+  emailInput.addEventListener('input', validateForm);
+
+  // Drag & Drop
   pdfCard.addEventListener('click', () => pdfInput.click());
-  pdfCard.addEventListener('dragover', e => { e.preventDefault(); pdfCard.classList.add('dragover'); });
-  pdfCard.addEventListener('dragleave', e => { e.preventDefault(); pdfCard.classList.remove('dragover'); });
+
+  pdfCard.addEventListener('dragover', e => {
+    e.preventDefault();
+    pdfCard.classList.add('dragover');
+  });
+
+  pdfCard.addEventListener('dragleave', e => {
+    e.preventDefault();
+    pdfCard.classList.remove('dragover');
+  });
+
   pdfCard.addEventListener('drop', e => {
     e.preventDefault();
     pdfCard.classList.remove('dragover');
-    pdfInput.files = e.dataTransfer.files;
-    status.innerText = "File ready: " + e.dataTransfer.files[0].name;
-  });
-  pdfInput.addEventListener('change', () => {
-    if (pdfInput.files.length > 0) status.innerText = "File selected: " + pdfInput.files[0].name;
+    if (e.dataTransfer.files.length > 0) {
+      pdfInput.files = e.dataTransfer.files;
+      status.innerText = "File ready: " + e.dataTransfer.files[0].name;
+      validateForm();
+    }
   });
 
-  // Stop spinner when iframe loads (download started)
-  hiddenIframe.onload = () => {
-    status.innerText = "Download started!";
-  };
+  // Form submission
+  pdfForm.addEventListener('submit', e => {
+    e.preventDefault(); // prevent default form submission
+    submitBtn.disabled = true;
+    status.innerHTML = '<div class="spinner"></div>Uploading and processing...';
+
+    // Build FormData
+    const formData = new FormData(pdfForm);
+
+    // Send asynchronously without waiting for response
+    fetch(pdfForm.action, {
+      method: 'POST',
+      body: formData,
+    }).catch(err => {
+      console.error("Error sending file:", err);
+    });
+
+    // Immediately show success message
+    setTimeout(() => {
+      status.innerText = "Thanks! You will receive the report to your email shortly!";
+    }, 500); // short delay for spinner
+  });
 </script>
 </body>
 </html>
