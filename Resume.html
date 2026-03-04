@@ -34,6 +34,15 @@
 	padding:0px;
   }
 
+  .navbar-nav.navbar-right {
+    white-space: nowrap; /* prevents wrapping */
+  }
+
+  .navbar-nav.navbar-right li {
+    display: inline-flex;
+    align-items: center;
+  }
+
   </style>
 </head> 
 
@@ -51,10 +60,22 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class=""><a href="Main_Page.html">Home</a></li>
+            <li class=""><a href="index.html">Home</a></li>
             <li class="active"><a href="#">Resume</a></li>
-            <li><a href="Papers.html">Writing Samples</a></li>
-			<li><a href="Programs.html">Program Samples</a></li>
+            <li><a href="papers.html">Writing Samples</a></li>
+            <li><a href="ailab.html">AI Laboratory</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
+              <li>
+                <a target="_new" href="https://www.linkedin.com/in/dylan-p3141592/" style = "padding:0px; margin:0px; margin-right:5px">
+                  <img src="headerImages/linkedin.png" style="height:50px;padding:0px; margin:0px;">
+                </a>
+              </li>
+              <li>
+                <a target="_new" href="https://github.com/burghporter314" style = "padding:0px; margin:0px; margin-right:-10px">
+                  <img src="headerImages/github.png" style="height:50px; padding:0px; margin: 0px;">
+                </a>
+              </li>
             </ul>
 	  	  <!--
           <ul class="nav navbar-nav navbar-right">
@@ -68,23 +89,28 @@
         <div class="sidebar-wrapper">
             <div class="profile-container" style="background-color:black;">
                 <img class="profile" src="assets/images/profile_pic.png" alt="" />
-                <h1 class="name">Dylan</h1>
-                <h3 class="tagline">Front-End Developer</h3>
+                <h1 class="name">Dr. Dylan Porter</h1>
+                <h3 class="tagline">Software Engineer</h3>
             </div><!--//profile-container-->
             
             <div class="education-container container-block">
                 <h2 class="container-block-title">Education</h2>
                 <div class="item">
-                    <h4 class="degree">Honors College (3.8 GPA)</h4>
-                    <h5 class="meta">Duquesne University</h5>
-                    <div class="time">2016 - Current</div>
-                </div><!--//item-->
+                    <h4 class="degree">Doctor of Engineering</h4>
+                    <h5 class="meta">Penn State University</h5>
+                    <div class="time">2023-2026</div>
+                </div>
                 <div class="item">
-                    <h4 class="degree">BS in Computer Science (3.8 / 3.8 GPA)</h4>
+                    <h4 class="degree">Master of Software Engineering</h4>
+                    <h5 class="meta">Penn State University</h5>
+                    <div class="time">2020-2021</div>
+                </div>
+                <div class="item">
+                    <h4 class="degree">BS in Computer Science</h4>
                     <h5 class="meta">Duquesne University</h5>
-                    <div class="time">Expected 2019</div>
-                </div><!--//item-->
-            </div><!--//education-container-->
+                    <div class="time">2015-2019</div>
+                </div>
+            </div>
             
             <div class="languages-container container-block">
                 <h2 class="container-block-title">Languages</h2>
@@ -98,8 +124,8 @@
                 <h2 class="container-block-title">Interests</h2>
                 <ul class="list-unstyled interests-list">
                     <li>Software Engineering</li>
-                    <li>Cyber Security</li>
-                    <li>Web-Development</li>
+                    <li>AI Engineering</li>
+                    <li>Web Development</li>
                 </ul>
             </div><!--//interests-->
             
@@ -110,9 +136,9 @@
             <section class="section summary-section">
                 <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
                 <div class="summary">
-                    <p> 4.0 student with extensive background experience in components integral to cyber security, web design, and    software engineering. Extremely hard-working individual with a strong passion for security and justice. Strong   communication and team work skills along with a definitive ability to learn and broaden skillset.</p>
-                </div><!--//summary-->
-            </section><!--//section-->
+                    <p>Doctor of Engineering with 7+ years of experience delivering scalable systems across healthcare, defense, and enterprise sectors. Researcher and Practitioner with experience in Artificial Intelligence, Requirements Engineering, and the general Software Development Lifecycle. Published Author for the IEEE academic repository.</p>
+                </div>
+            </section>
             
             <section class="section experiences-section">
                 <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
@@ -120,42 +146,61 @@
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Front-End Developer Intern</h3>
-                            <div class="time">Summer of 2017</div>
+                            <h3 class="job-title">Senior Software Engineer</h3>
+                            <div class="time">January 2022 - October 2025</div>
                         </div><!--//upper-row-->
-                        <div class="company">Center for Organ Recovery (CORE)</div>
+                        <div class="company">Solventum / 3M</div>
                     </div><!--//meta-->
                     <div class="details">
-						<p>Developed a complex searching system used for corporate headquarters.
-                        <p>Developed and Analyzed new Software for data transfer from paradox servers to updated SQL Servers.</p>  
-                        <p>Team Collaboration for Engineering new data storage and retrieval techniques. </p>
-                    </div><!--//details-->
-                </div><!--//item-->
+                        <p>Developed and modernized enterprise healthcare applications, serving thousands of users within hospital systems, by enhancing data management and clinical workflows within CDI Collaborate, and reducing bugs.</p>
+                        <p>Architected the Content Module Editor, Physician Query Editor, and Worklist Editor; streamlined requirements management and delivered scalable metadata-driven tools, enhancing broader system architecture inputs for 40+ internal users.</p>
+                        <p>Built a centralized content repository for healthcare rule violations and associated metadata, enabling CSV, JSON, and system-compatible exports consumed by downstream services and improving consistency, maintainability, and integration reliability.</p>
+                        <p>Integrated Content Module Editor with 360 Encompass, enabling 200+ clinicians, coders, and auditors, and reduced manual effort by 3 days per audit cycle, improving system architecture.</p>
+                        <p>Led the modernization of legacy deployment processes, resulting in a transition from weekly to daily deployments for CDI Collaborate, directly improving release velocity.</p>
+                        <p>Advanced to requirement analyst and product lead, interfacing with all parties for tool integration following a promotion cycle of 2 years and demonstrating leadership capabilities.</p>
+                    </div>
+                </div>
                 
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Research – Duquesne University’s Dr. Juola </h3>
-                            <div class="time">2016-2017</div>
+                            <h3 class="job-title">Software Engineer</h3>
+                            <div class="time">June 2019 - January 2022</div>
                         </div><!--//upper-row-->
-                        <div class="company">Duquesne University</div>
+                        <div class="company">General Dynamics</div>
                     </div><!--//meta-->
                     <div class="details">
-                        <p>Analyzing and constructing algorithms for a language analyzer.</p>  
-                        <p>Designing a program to define a correlation between author and work using JGAAP.</p>
-                    </div><!--//details-->
-                </div><!--//item-->
+                        <p>Spearheaded the development of real-time logistics applications; slashed data processing time by 30% and supported operational analytics for 300+ military users across defense programs.</p>
+                        <p>Engineered production-grade PaaS infrastructure and deployment environments, automating provisioning and management using Terraform, Terragrunt, and Ansible to improve system reliability by 25% and reduced manual tasks by 2 days.</p>
+                        <p>Architected and automated 5+ deployment workflows incorporating scalable perimeters, leading to a 20% reduction in critical deployment errors and vulnerabilities while improving system security.</p>
+                        <p>Fortified production systems by addressing security vulnerabilities and implementing secure design patterns, reducing security vulnerabilities by 50% while maintaining high availability for 40+ users.</p>
+                        <p>Promoted to engineer a fully automated PaaS deployment pipeline, enabling flexible architecture requirements for defense applications and generating $50,000 in yearly savings due to infrastructure efficiencies.</p>
+                    </div>
+                </div>
                 
                 <div class="item">
                     <div class="meta">
                         <div class="upper-row">
-                            <h3 class="job-title">Associate for Best Buy, Giant Eagle, and Gordon Food Services</h3>
-                            <div class="time">2013 - 2015</div>
+                            <h3 class="job-title">Software Developer Intern</h3>
+                            <div class="time">June 2018 - August 2018</div>
                         </div><!--//upper-row-->
-                        <div class="company">Pittsburgh Companies</div>
+                        <div class="company">UPMC</div>
                     </div><!--//meta-->
                     <div class="details">
-                        <p>Assisted with manual labor -- including bagging, stocking, and unloading heavy materials.</p>  
+                        <p>Modernized batch data processing pipelines for clinical/operational data from remote sites, improving data ingestion speed by 3x and decreasing processing errors by 20%.</p>
+                    </div><!--//details-->
+                </div><!--//item-->
+
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">Software Developer Intern</h3>
+                            <div class="time">May 2017 - August 2017</div>
+                        </div><!--//upper-row-->
+                        <div class="company">CORE</div>
+                    </div><!--//meta-->
+                    <div class="details">
+                        <p>Engineered an automated donor-recipient matching system with end-to-end architecture, improving successful matches and decreasing time spent on manual reconciliation by 10%.</p>
                     </div><!--//details-->
                 </div><!--//item-->
                 
@@ -164,30 +209,25 @@
             <section class="section projects-section">
                 <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
                 <div class="item">
-                    <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-mobile-apps-delta/" target="_blank">RSA</a></span> - <span class="project-tagline">Secure, java-based messaging system that uses RSA encryption for privacy.</span>
+                    <span class="project-title">ARQM</span> - <span class="project-tagline">An application that allows for the automated quality analysis of any requirement document.</span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="#hook">JGAAP</a></span> - <span class="project-tagline">Programming Algorithm (Reads in millions of characters and defines an important correlation)</span>
-                    
+                    <span class="project-title">ARQM Add-in</span> - <span class="project-tagline">The MS Word-based implementation of Add-in that allows for holistic SRS Analysis.</span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">Practical Applications</a></span> - 
-                    <span class="project-tagline">Professional Messaging Application / Music Application (Intense usage of SQL, PHP, and databases) </span>
+                    <span class="project-title">Mock Market</span> - <span class="project-tagline">An application that simulates stock market trading, including buying and selling stock.</span>
                 </div><!--//item-->
                 <div class="item">
-                    <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-startups-tempo/" target="_blank">News Finder</a></span> - <span class="project-tagline">Universally compatible RSS Feed using XML (Works on any site that has an RSS Feed)                                </span>
+                    <span class="project-title">C++ Compiler</span> - <span class="project-tagline">A compiler that will convert C++ code to machine code to run natively.</span>
                 </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="hhttp://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-mobile-apps-atom/" target="_blank">Android</a></span> - <span class="project-tagline">Multiple Android Applications (Bundles applications with build-in services and notifications)</span>
-                </div><!--//item-->
-
             </section><!--//section-->
             
             <section class="skills-section section">
                 <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
                 <div class="skillset">        
+                    
                     <div class="item">
-                        <h3 class="level-title">Java</h3>
+                        <h3 class="level-title">HTML, CSS, Javascript, React, Angular</h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="98%">
                             </div>                                      
@@ -195,23 +235,24 @@
                     </div><!--//item-->
                     
                     <div class="item">
-                        <h3 class="level-title">HTML, CSS</h3>
+                        <h3 class="level-title">Java, SpringBoot, Scala</h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="98%">
                             </div>                                      
                         </div><!--//level-bar-->                                 
                     </div><!--//item-->
-                    
+                
+
                     <div class="item">
-                        <h3 class="level-title">Javascript</h3>
+                        <h3 class="level-title">SQL, NoSQL, Spark</h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="98%">
+                            <div class="level-bar-inner" data-level="95%">
                             </div>                                      
                         </div><!--//level-bar-->                                 
                     </div><!--//item-->
-                    
+
                     <div class="item">
-                        <h3 class="level-title">PHP, SQL</h3>
+                        <h3 class="level-title">PyTorch, TensorFlow, Scikit-learn</h3>
                         <div class="level-bar">
                             <div class="level-bar-inner" data-level="95%">
                             </div>                                      
@@ -227,9 +268,9 @@
                     </div><!--//item-->
                     
                     <div class="item">
-                        <h3 class="level-title">.NET</h3>
+                        <h3 class="level-title">AWS, Ansible, Terraform, Kubernetes, Docker</h3>
                         <div class="level-bar">
-                            <div class="level-bar-inner" data-level="60%">
+                            <div class="level-bar-inner" data-level="80%">
                             </div>                                      
                         </div><!--//level-bar-->                                 
                     </div><!--//item-->

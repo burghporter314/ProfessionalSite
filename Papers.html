@@ -28,6 +28,14 @@
   body {
     padding:0px;
   }
+  .navbar-nav.navbar-right {
+    white-space: nowrap; /* prevents wrapping */
+  }
+
+  .navbar-nav.navbar-right li {
+    display: inline-flex;
+    align-items: center;
+  }
 
   </style>
   </head>
@@ -46,10 +54,22 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
-            <li class=""><a href="Main_Page.html">Home</a></li>
-            <li><a href="Resume.html">Resume</a></li>
-            <li class="active"><a href="Papers.html">Writing Samples</a></li>
-			<li><a href="Programs.html">Program Samples</a></li>
+            <li class=""><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li class="active"><a href="papers.html">Writing Samples</a></li>
+            <li><a href="ailab.html">AI Laboratory</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
+              <li>
+                <a target="_new" href="https://www.linkedin.com/in/dylan-p3141592/" style = "padding:0px; margin:0px; margin-right:5px">
+                  <img src="headerImages/linkedin.png" style="height:50px;padding:0px; margin:0px;">
+                </a>
+              </li>
+              <li>
+                <a target="_new" href="https://github.com/burghporter314" style = "padding:0px; margin:0px; margin-right:-10px">
+                  <img src="headerImages/github.png" style="height:50px; padding:0px; margin: 0px;">
+                </a>
+              </li>
             </ul>
 	  	  <!--
           <ul class="nav navbar-nav navbar-right">
@@ -66,10 +86,8 @@
         <!-- Page Heading -->
 		
         <header class="jumbotron hero-spacer" style="padding:15px;">
-            <h1>Welcome!</h1>
-            <p>Scroll down to see some of my assignment and writing projects!</p>
-            <p><a target="_new" href="Files/Papers/OS_Paper.docx"  class="btn btn-primary btn-large">View Featured Paper!</a>
-            </p>
+            <h2>Welcome!</h2>
+            <p>Scroll down to access my publicly available research.</p>
         </header>
 
         <!-- /.row -->
@@ -79,25 +97,47 @@
 		
             <div class="col-md-6 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="PaperImages/img.jpg" alt="">
+                    <img src="ProjectImages/psu.jpg" alt="">
                     <div class="caption">
-                        <h3>Windows OS</h3>
-                        <p>Operating Systems</p>
+                        <h3>Praxis</h3>
+                        <p>Doctor of Engineering</p>
                         <p>
-                            <a target="_new" href="Files/Papers/OS_Paper.docx" class="btn btn-primary">View Paper</a>
+                            <a target="_new" href="Files/Papers/PRAXIS.pdf" class="btn btn-primary">View Paper</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="ProjectImages/psu.jpg" alt="">
+                    <div class="caption">
+                        <h3>Technical Proposals</h3>
+                        <p>Master of Software Engineering</p>
+                        <p>
+                            <div class="row">
+                            <a target="_new" href="Files/Papers/DATABASE_SPEC.pdf"  class="btn btn-primary">D.B.</a> 
+                            <a target="_new" href="Files/Papers/ARCH_AND_DESIGN.pdf"  class="btn btn-primary">Design</a> 
+                            <a target="_new" href="Files/Papers/SRS.pdf"  class="btn btn-primary">SRS</a> 
+                            <a target="_new" href="Files/Papers/TESTING.pdf"  class="btn btn-primary">Test</a> 
+                            </div>
                         </p>
                     </div>
                 </div>
             </div>
 			
+
+        </div>
+
+        <div class="row text-center" id= "stories2">
             <div class="col-md-6 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="PaperImages/img1.jpg" alt="">
+                    <img src="ProjectImages/nasa.jpg" alt="">
                     <div class="caption">
-                        <h3>Solar Energy</h3>
-                        <p>Environmental History</p>
+                        <h3>ARQM Validation</h3>
+                        <p>NASA</p>
                         <p>
-                            <a target="_new" href="Files/Papers/Solar_Energy.docx"  class="btn btn-primary">View Paper</a> 
+                            <a target="_new" href="Files/Papers/NASA_JOURNAL.pdf" class="btn btn-primary">View Paper</a>
                         </p>
                     </div>
                 </div>
@@ -105,30 +145,16 @@
 
             <div class="col-md-6 col-sm-6 hero-feature">
                 <div class="thumbnail">
-                    <img src="PaperImages/img2.jpg" alt="">
+                    <img src="ProjectImages/ieee.png" alt="">
                     <div class="caption">
-                        <h3>Political Science</h3>
-                        <p>Imaginative Literature</p>
+                        <h3>Requirement Automation</h3>
+                        <p>IEEE Computer</p>
                         <p>
-                            <a target="_new" href="Files/Papers/Political_Science.docx" class="btn btn-primary">View Paper</a>
+                            <a target="_new" href="Files/Papers/COMPUTER_MAGAZINE.pdf"  class="btn btn-primary">View Paper</a> 
                         </p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-md-6 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="PaperImages/img3.jpg" alt="">
-                    <div class="caption">
-                        <h3>Speech Evaluation</h3>
-                        <p>Public Speaking</p>
-                        <p>
-                            <a target="_new" href="Files/Papers/Speech_Evaluation.docx"  class="btn btn-primary">View Paper</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-
 
         </div>
 
