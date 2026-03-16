@@ -1,462 +1,586 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dylan's Website</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dr. Dylan Porter | Software Engineer</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+  <link href="css/redesign.css" rel="stylesheet">
 
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/1.10.25/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  <style>
-  .affix {
-      top: 0;
-      width: 100%;
-  }
-
-  .affix + .container-fluid {
-      padding-top: 70px;
-  }
-  body {
-    padding:0px;
-  }
-
-  .navbar-nav.navbar-right {
-    white-space: nowrap; /* prevents wrapping */
-  }
-
-  .navbar-nav.navbar-right li {
-    display: inline-flex;
-    align-items: center;
-  }
-  
-  </style>
-  </head>
-  <body style="">
-
-	<!-- <div class="container">
-    
-	  <!-- Modal -->
-	  <div class="modal fade" id="myModal" role="dialog">
-		<div class="modal-dialog">
-		
-		  <!-- Modal content-->
-		  <div class="modal-content">
-			<div class="modal-header">
-			  <button type="button" class="close" data-dismiss="modal">&times;</button>
-			  <h4 class="modal-title">Attention</h4>
-			</div>
-			<div class="modal-body">
-			  <p>This site is only meant for potential employers, family, or friends -- If this 
-			  does not describe you, please exit the site. The site is also still under maintence 
-			  -- so there may be broken links. Thank you for visiting my site!</p>
-			</div>
-			<div class="modal-footer">
-			  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		  </div>
-		  
-		</div>
-	  </div>
-	  
-	</div>
-
-    <nav class="navbar navbar-inverse" style="z-index:16; border-radius:0px;margin-bottom:0px;" data-spy="affix" data-offset-top="197" style="margin-bottom:10px;">
-      <div class="container-fluid">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#">Home Page</a>
+  <!-- Navigation -->
+  <nav class="site-nav" id="siteNav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#hero">DP</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#research">Research</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#github">GitHub</a></li>
+        </ul>
+        <div class="nav-social">
+          <a class="nav-social-link" href="https://www.linkedin.com/in/dylan-p3141592/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="nav-social-icon" src="headerImages/linkedin.png" alt="LinkedIn">
+          </a>
+          <a class="nav-social-link" href="https://github.com/burghporter314" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img class="nav-social-icon" src="headerImages/github.png" alt="GitHub">
+          </a>
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="papers.html">Writing Samples</a></li>
-            <li><a href="ailab.html">AI Laboratory</a></li>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-orb"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot"></span>
+        Doctor of Engineering
+      </div>
+      <h1 class="hero-name">Dr. Dylan <span class="gradient-text">Porter</span></h1>
+      <p class="hero-tagline">Building scalable systems at the frontier of AI and software engineering.</p>
+      <div class="hero-tags">
+        <span class="hero-tag">Software Engineer</span>
+        <span class="hero-tag">AI Researcher</span>
+        <span class="hero-tag">IEEE Author</span>
+        <span class="hero-tag">Full-Stack Developer</span>
+      </div>
+      <div class="hero-ctas">
+        <a href="#experience" class="btn-primary-glow">View Experience</a>
+        <a href="#research" class="btn-secondary-glass">Explore Research &#8595;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Strip -->
+  <div class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat-item">
+        <div class="stat-value">7+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">3+</div>
+        <div class="stat-label">Publications</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">D.Eng</div>
+        <div class="stat-label">Penn State</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">IEEE</div>
+        <div class="stat-label">Author</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="site-section" id="about">
+    <div class="section-inner">
+      <div class="about-grid animate-on-scroll">
+
+        <div class="about-left">
+          <div class="section-tag">About</div>
+          <h2 class="section-title" style="text-align:left; margin-bottom:18px;">Career Profile</h2>
+          <p class="about-bio">Doctor of Engineering with 7+ years of experience delivering scalable systems across healthcare, defense, and enterprise sectors. Researcher and practitioner with expertise in artificial intelligence, requirements engineering, and the full software development lifecycle. Published author in IEEE Computer.</p>
+
+          <div class="skills-block">
+            <div class="skill-group">
+              <span class="skill-group-label">Frontend</span>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML &amp; CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Angular</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Backend</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">Scala</span>
+                <span class="skill-tag">Python</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Data &amp; AI</span>
+              <div class="skill-tags">
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">TensorFlow</span>
+                <span class="skill-tag">Scikit-learn</span>
+                <span class="skill-tag">SQL / NoSQL</span>
+                <span class="skill-tag">Spark</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <span class="skill-group-label">Infrastructure</span>
+              <div class="skill-tags">
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Kubernetes</span>
+                <span class="skill-tag">Terraform</span>
+                <span class="skill-tag">Ansible</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <div class="section-tag">Education</div>
+          <div class="edu-list">
+            <div class="edu-item">
+              <div class="edu-degree">Doctor of Engineering</div>
+              <div class="edu-school">Penn State University</div>
+              <div class="edu-year">2023 – 2026</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">Master of Software Engineering</div>
+              <div class="edu-school">Penn State University</div>
+              <div class="edu-year">2020 – 2021</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-degree">BS in Computer Science</div>
+              <div class="edu-school">Duquesne University</div>
+              <div class="edu-year">2015 – 2019</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="site-section alt-bg" id="experience">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Career</div>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="exp-timeline">
+
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-dot"></div>
+          <div class="exp-body">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Senior Software Engineer</div>
+                <div class="exp-company">Solventum / 3M</div>
+              </div>
+              <div class="exp-dates">Jan 2022 – Oct 2025</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Developed and modernized enterprise healthcare applications serving thousands of hospital system users, enhancing CDI workflows and reducing bugs across clinical tooling.</li>
+              <li>Led CI/CD modernization enabling daily deployments (up from weekly) and integrated content tools with 360 Encompass, reducing audit cycle manual effort by 3 days for 200+ clinicians.</li>
             </ul>
+          </div>
+        </div>
 
-            <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-              <li>
-                <a target="_new" href="https://www.linkedin.com/in/dylan-p3141592/" style = "padding:0px; margin:0px; margin-right:5px">
-                  <img src="headerImages/linkedin.png" style="height:50px;padding:0px; margin:0px;">
-                </a>
-              </li>
-              <li>
-                <a target="_new" href="https://github.com/burghporter314" style = "padding:0px; margin:0px; margin-right:-10px">
-                  <img src="headerImages/github.png" style="height:50px; padding:0px; margin: 0px;">
-                </a>
-              </li>
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-dot"></div>
+          <div class="exp-body">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Software Engineer</div>
+                <div class="exp-company">General Dynamics</div>
+              </div>
+              <div class="exp-dates">Jun 2019 – Jan 2022</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Built real-time logistics applications for 300+ military users, cutting data processing time by 30% and reducing critical deployment errors by 20%.</li>
+              <li>Automated PaaS deployment pipelines with Terraform, Terragrunt, and Ansible — generating $50K in yearly infrastructure savings and improving system reliability by 25%.</li>
             </ul>
-            
-	  	  <!--
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-		  </ul>-->
-        </div>
-      </div>
-    </nav>
-    <!--Slideshow-->
-    <div class="container-fluid" style="padding:0px;">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" style = "margin:0px;">
-        <!-- Indicators -->
-        <ol class="carousel-indicators" style = "opacity:0;" >
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-		  <li data-target="#myCarousel" data-slide-to="3"></li>
-        </ol>
-
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="">
-
-
-          <div class="item active">
-            <img src="Images/pic15.jpg" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Software Engineering</h3>
-              <p>7+ Years of Full-Stack Experience in Software Engineering</p>
-            </div>
           </div>
-
-          <div class="item">
-            <img src="Images/pic20.jpg" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>AI Engineering</h3>
-              <p>Experience in Cutting-Edge AI Technology</p>
-              <!--<a href="#accordion0"> <button type="button" class="btn btn-default btn-sm">Learn More</button> </a>-->
-            </div>
-          </div>
-
-          <div class="item">
-            <img src="Images/pic1.jpg" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Cyber Security</h3>
-              <p>Experience in AWS and General Network Security</p>
-            </div>
-          </div>
-    
-          <div class="item">
-            <img src="Images/pic3.jpg" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Android Apps</h3>
-              <p>Mobile Development for a Variety of Applications</p>
-            </div>
-          </div>
-		  
-          <div class="item">
-            <img src="Images/pic2.jpg" style="width:100%;">
-            <div class="carousel-caption">
-              <h3>Operating Systems</h3>
-              <p>Strong Windows and Linux Experience</p>
-            </div>
-          </div>
-		  
         </div>
 
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-dot"></div>
+          <div class="exp-body">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Software Developer Intern</div>
+                <div class="exp-company">UPMC</div>
+              </div>
+              <div class="exp-dates">Jun 2018 – Aug 2018</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Modernized batch data processing pipelines for clinical data from remote sites, improving ingestion speed by 3× and reducing processing errors by 20%.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exp-item animate-on-scroll">
+          <div class="exp-dot"></div>
+          <div class="exp-body">
+            <div class="exp-header">
+              <div>
+                <div class="exp-title">Software Developer Intern</div>
+                <div class="exp-company">CORE</div>
+              </div>
+              <div class="exp-dates">May 2017 – Aug 2017</div>
+            </div>
+            <ul class="exp-bullets">
+              <li>Engineered an automated donor-recipient matching system, improving match rates and decreasing manual reconciliation time by 10%.</li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
-    <br />
-    <br />
-    <div class="container alert alert-info">
-      <strong>Welcome!</strong> Please see below for my projects and research.
-    </div>
-	<br />
+  </section>
 
-
-	<!--New Section-->
-    <div class = "container">
-      <div class="media">
-        <div class="media-left">
-          <img src="Images/img_avatar_psu.png" class="media-object" style="width:55px;margin-bottom:10px;border-radius:15px">
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading" style="margin-top:5px">Doctor of Engineering: <span style="font-weight: bold"">Completed!</span></h4>
-          <p style = "">I have concluded my studies at Penn State University. See below for the degree-related research and project material.</p>
-		</div>
+  <!-- Research & Writing -->
+  <section class="site-section" id="research">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Research &amp; Writing</div>
+        <h2 class="section-title">Publications &amp; Papers</h2>
+        <p class="section-subtitle">Peer-reviewed research, technical proposals, and published work.</p>
       </div>
-    </div>	
-	
-	<div class="container">
-      <div class="panel-group " id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading" >
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapsepublicationscol">Publications</a>
-            </h4>
-          </div>
-          <div id="collapsepublicationscol" class="panel-collapse collapse in">
-            <div class="panel-body">
 
-
-			  <div class="row text-center" id= "stories">
-
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/psu.jpg" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>Praxis</h3>
-                        <p>PSU Repository</p>
-                        <p>
-                            <a target="_new" href="https://scholarsphere.psu.edu/resources/8eb73810-98d0-4378-b0c3-81558087d660" class="btn btn-primary">View Publication</a>
-                        </p>
-                    </div>
-                </div>
-
-              </div>
-
-
-
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/ieee.png" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>Req. Automation</h3>
-                        <p>IEEE Computer</p>
-                        <p>
-                            <a target="_new" href="https://doi.org/10.1109/MC.2024.3480629" class="btn btn-primary">View Publication</a>
-                        </p>
-                    </div>
-                </div>
-
-              </div>
-
-
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/nasa.jpg" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>ARQM Validation</h3>
-                        <p>NASA</p>
-                        <p>
-                            <a class="btn btn-primary" disabled>Pending</a>
-                        </p>
-                    </div>
-                </div>
-
-              </div>
-
-			  </div>
-			  </div>
-
-          </div>
-        </div>
-
-
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseprojectscol">Projects</a>
-            </h4>
-          </div>
-          <div id="collapseprojectscol" class="panel-collapse collapse">
-            <div class="panel-body">
-			  <div class="row text-center" id= "stories">
-
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/github.png" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>ARQM Ingestion</h3>
-                        <p>Requirement Analysis</p>
-                        <p>
-                            <a target="_new" href="https://github.com/burghporter314/ARQM-Finalized" class="btn btn-primary">View Code</a>
-                        </p>
-                    </div>
-                </div>
-
-              </div>
-
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/github.png" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>Add-in (FE)</h3>
-                        <p>Requirement Analysis</p>
-                        <p>
-                            <a target="_new" href="https://github.com/burghporter314/Automatic-Requirements-Quality-Measurement-Tool" class="btn btn-primary">View Code</a>
-                        </p>
-                    </div>
-                </div>
-               </div>
-			  <div class="col-md-3 col-sm-4 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/github.png" style="padding-top:20px" alt="">
-                    <div class="caption">
-                        <h3>Add-in (BE)</h3>
-                        <p>Requirement Analysis</p>
-                        <p>
-                            <a target="_new" href="https://github.com/burghporter314/Automated-Requirements-Quality-Measurement-Tool-Server" class="btn btn-primary">View Code</a>
-                        </p>
-                    </div>
-                </div>
-               </div>
-			  </div>
-			</div>
-          </div>
-        </div>
-	  </div>
-	</div>
-
-
-  <hr>
-<!-- Left-aligned media object -->
-    <div class = "container"  id="osstart">
-      <div class="media">
-        <div class="media-left">
-          <img src="Images/img_avatar_github.png" class="media-object" style="width:50px; margin-bottom:10px;">
-        </div>
-        <div class="media-body">
-          <h4 class="media-heading" style="margin-top:10px">Want more of my work? Please check out my Github account!</h4>
-          <p style = "">Check out my <a target="_new" href="http://github.com/burghporter314">Github account</a> to see all of my recent projects. </p>
-        </div>
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="tab-pubs">Publications</button>
+        <button class="tab-btn" data-tab="tab-writing">Writing Samples</button>
       </div>
-    </div>	
 
-    <div class="container">
-      <div class="panel-group " id="accordion">
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <h4 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseprogcol">Github Projects</a>
-            </h4>
+      <div class="tab-pane active" id="tab-pubs">
+        <div class="cards-grid-3">
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/psu.jpg" alt="Penn State University">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Praxis</h3>
+              <p class="card-meta">PSU Repository &bull; Doctor of Engineering</p>
+              <div class="card-actions">
+                <a href="https://scholarsphere.psu.edu/resources/8eb73810-98d0-4378-b0c3-81558087d660" target="_blank" rel="noopener" class="btn-glow">View Publication</a>
+              </div>
+            </div>
           </div>
-          <div id="collapseprogcol" class="panel-collapse collapse in">
-            <div class="panel-body">
-				<table class="table table-hover" id="test">
-					<thead>
-					<tr>
-						<th>Project</th>
-						<th>Description</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/ARQM-Finalized">ARQM API</a></td>
-						<td>The main ARQM application. Exposes a public API that returns a quality report of any requirement document.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Automatic-Requirements-Quality-Measurement-Tool">ARQM Add-in (FE)</a></td>
-						<td>The front-end code for the MS Word ARQM Add-in. The program allows for the declaration of requirement hierarchy.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Automated-Requirements-Quality-Measurement-Tool-Server">ARQM Add-in (BE)</a></td>
-						<td>The back-end code for the MS Word ARQM Add-in. Primarily serves to predict requirement quality issues utilizing AI.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Emotion-Recognition">AI-based Emotion Recognition</a></td>
-						<td>Utilizes different AI models to detect sentiment and mood within text.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/tic-tac-toe">AI-based Tic-Tac-Toe</a></td>
-						<td>Reinforcement learning-based implementation to simulate 5x5 tic-tac-toe with an AI Agent.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Food-Scarcity-Prediction">AI-based Food Scarcity Prediction</a></td>
-						<td>An AI algorithm that predicts the chance of food scarcity for a given location given certain environmental factors.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/CPPCompiler">C++ Compiler</a></td>
-						<td>A compiler that converts C++ code into machine code. Support for complicated programmatic structures.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Mock-Market">Mock Market</a></td>
-						<td>An application that simulates sample market trading and results based on real-time market data.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/mock-market-server">Mock Market Server</a></td>
-						<td>The server that handles the mock market API requirements, including market transactions.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Cyber-Vault">Cyber Vault</a></td>
-						<td>An application that utilizes encryption to secure sensitive files.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/ProfessionalSite">Professional Site</a></td>
-						<td>The main site used to display Dr. Porter's information including projects and professional details.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Drive_Backup_Linux">Linux Backup System</a></td>
-						<td>A bash script that dynamically allows for the backup of a linux-based system through the google drive API.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/DatabaseManagementSystem">Database Management System</a></td>
-						<td>A system that simulates the complexities of an RDMS, allowing for basic database operations.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/DatabaseManagementSystem2">Database Management System (2nd iter.)</a></td>
-						<td>An extension to the original database management system that extends upon existing database operations support.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/IndigenousWebCrawler">Indigenous Web Crawler</a></td>
-						<td>A web crawler that collects and analyzes languages via the Twitter API.</td>
-					</tr>
-					<tr>
-						<td><a target="_new" href="https://github.com/burghporter314/Minesweeper">Minesweeper</a></td>
-						<td>A simple implementation of the Minesweeper game. Allows for an arbitrary size board and difficult.</td>
-					</tr>
-					</tbody>
-				</table>
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/ieee.png" alt="IEEE">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Req. Automation</h3>
+              <p class="card-meta">IEEE Computer</p>
+              <div class="card-actions">
+                <a href="https://doi.org/10.1109/MC.2024.3480629" target="_blank" rel="noopener" class="btn-glow">View Publication</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/nasa.jpg" alt="NASA">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">ARQM Validation</h3>
+              <p class="card-meta">NASA</p>
+              <div class="card-actions">
+                <span class="btn-disabled-glass">Pending</span>
+              </div>
             </div>
           </div>
 
         </div>
+      </div>
+
+      <div class="tab-pane" id="tab-writing">
+        <div class="cards-grid-2">
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/psu.jpg" alt="Penn State University">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Praxis</h3>
+              <p class="card-meta">PSU Repository &bull; Doctor of Engineering</p>
+              <div class="card-actions">
+                <a href="Files/Papers/PRAXIS.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/psu.jpg" alt="Penn State University">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Technical Proposals</h3>
+              <p class="card-meta">PSU &bull; Master of Software Engineering</p>
+              <div class="card-actions">
+                <a href="Files/Papers/DATABASE_SPEC.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Database</a>
+                <a href="Files/Papers/ARCH_AND_DESIGN.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Design</a>
+                <a href="Files/Papers/SRS.pdf" target="_blank" rel="noopener" class="btn-glass-sm">SRS</a>
+                <a href="Files/Papers/TESTING.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Testing</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/nasa.jpg" alt="NASA">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">ARQM Validation</h3>
+              <p class="card-meta">NASA</p>
+              <div class="card-actions">
+                <a href="Files/Papers/NASA_JOURNAL.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card animate-on-scroll">
+            <div class="card-image">
+              <img src="ProjectImages/ieee.png" alt="IEEE">
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Requirement Automation</h3>
+              <p class="card-meta">IEEE Computer</p>
+              <div class="card-actions">
+                <a href="Files/Papers/COMPUTER_MAGAZINE.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
+              </div>
+            </div>
+          </div>
+
         </div>
-      </div> 
+      </div>
+
     </div>
+  </section>
 
+  <!-- Projects -->
+  <section class="site-section alt-bg" id="projects">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Code</div>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Open-source tools and applications built for research and production use.</p>
+      </div>
+      <div class="cards-grid-3">
 
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/github.png" alt="GitHub">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">ARQM Ingestion</h3>
+            <p class="card-meta">Requirement Analysis</p>
+            <div class="card-actions">
+              <a href="https://github.com/burghporter314/ARQM-Finalized" target="_blank" rel="noopener" class="btn-glow">View Code</a>
+            </div>
+          </div>
+        </div>
 
-    <footer class="jumbotron hero-spacer" style="padding:15px; margin-bottom: 0px;">
-  	  <h3 class="text-center">Contact</h3>
-      <hr>
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/github.png" alt="GitHub">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Add-in (FE)</h3>
+            <p class="card-meta">Requirement Analysis</p>
+            <div class="card-actions">
+              <a href="https://github.com/burghporter314/Automatic-Requirements-Quality-Measurement-Tool" target="_blank" rel="noopener" class="btn-glow">View Code</a>
+            </div>
+          </div>
+        </div>
 
-		  <h4><span class="glyphicon glyphicon-map-marker"></span> Pittsburgh, Pennsylvania</h4>
-		  <h4><span class="glyphicon glyphicon-phone"></span> Phone: 412-735-1652</h4>
-		  <h4><span class="glyphicon glyphicon-envelope"></span> Email: burghporter314@gmail.com</h4>
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/github.png" alt="GitHub">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Add-in (BE)</h3>
+            <p class="card-meta">Requirement Analysis</p>
+            <div class="card-actions">
+              <a href="https://github.com/burghporter314/Automated-Requirements-Quality-Measurement-Tool-Server" target="_blank" rel="noopener" class="btn-glow">View Code</a>
+            </div>
+          </div>
+        </div>
 
-	  </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub -->
+  <section class="site-section" id="github">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-tag">Open Source</div>
+        <h2 class="section-title">GitHub Projects</h2>
+        <p class="section-subtitle">All public repositories spanning AI, systems, and web development.</p>
+      </div>
+
+      <div class="github-intro animate-on-scroll">
+        <img class="github-intro-avatar" src="Images/img_avatar_github.png" alt="GitHub">
+        <div>
+          <h4>Explore My GitHub</h4>
+          <p>Visit <a href="https://github.com/burghporter314" target="_blank" rel="noopener noreferrer">github.com/burghporter314</a> to see all recent projects and open-source work.</p>
+        </div>
+      </div>
+
+      <div class="dark-table-wrapper animate-on-scroll">
+        <table id="githubTable" class="dark-table">
+          <thead>
+            <tr><th>Project</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><a href="https://github.com/burghporter314/ARQM-Finalized" target="_blank" rel="noopener">ARQM API</a></td><td>The main ARQM application. Exposes a public API that returns a quality report of any requirement document.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Automatic-Requirements-Quality-Measurement-Tool" target="_blank" rel="noopener">ARQM Add-in (FE)</a></td><td>The front-end code for the MS Word ARQM Add-in. The program allows for the declaration of requirement hierarchy.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Automated-Requirements-Quality-Measurement-Tool-Server" target="_blank" rel="noopener">ARQM Add-in (BE)</a></td><td>The back-end code for the MS Word ARQM Add-in. Primarily serves to predict requirement quality issues utilizing AI.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Emotion-Recognition" target="_blank" rel="noopener">AI-based Emotion Recognition</a></td><td>Utilizes different AI models to detect sentiment and mood within text.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/tic-tac-toe" target="_blank" rel="noopener">AI-based Tic-Tac-Toe</a></td><td>Reinforcement learning-based implementation to simulate 5x5 tic-tac-toe with an AI Agent.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Food-Scarcity-Prediction" target="_blank" rel="noopener">AI-based Food Scarcity Prediction</a></td><td>An AI algorithm that predicts the chance of food scarcity for a given location given certain environmental factors.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/CPPCompiler" target="_blank" rel="noopener">C++ Compiler</a></td><td>A compiler that converts C++ code into machine code. Support for complicated programmatic structures.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Mock-Market" target="_blank" rel="noopener">Mock Market</a></td><td>An application that simulates sample market trading and results based on real-time market data.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/mock-market-server" target="_blank" rel="noopener">Mock Market Server</a></td><td>The server that handles the mock market API requirements, including market transactions.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Cyber-Vault" target="_blank" rel="noopener">Cyber Vault</a></td><td>An application that utilizes encryption to secure sensitive files.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/ProfessionalSite" target="_blank" rel="noopener">Professional Site</a></td><td>The main site used to display Dr. Porter's information including projects and professional details.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Drive_Backup_Linux" target="_blank" rel="noopener">Linux Backup System</a></td><td>A bash script that dynamically allows for the backup of a linux-based system through the Google Drive API.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/DatabaseManagementSystem" target="_blank" rel="noopener">Database Management System</a></td><td>A system that simulates the complexities of an RDMS, allowing for basic database operations.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/DatabaseManagementSystem2" target="_blank" rel="noopener">Database Management System (2nd iter.)</a></td><td>An extension to the original database management system that extends upon existing database operations support.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/IndigenousWebCrawler" target="_blank" rel="noopener">Indigenous Web Crawler</a></td><td>A web crawler that collects and analyzes languages via the Twitter API.</td></tr>
+            <tr><td><a href="https://github.com/burghporter314/Minesweeper" target="_blank" rel="noopener">Minesweeper</a></td><td>A simple implementation of the Minesweeper game. Allows for an arbitrary size board and difficulty.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-brand-name">Dr. Dylan Porter</div>
+          <p class="footer-tagline">Software Engineer, AI Researcher, and Doctor of Engineering building scalable systems at the frontier of technology.</p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Navigation</div>
+          <nav class="footer-nav">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#github">GitHub</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#128205;</span>
+              Pittsburgh, PA
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#128222;</span>
+              412-735-1652
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#9993;</span>
+              burghporter314@gmail.com
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Dr. Dylan Porter. All rights reserved.</p>
+        <div class="footer-socials">
+          <a class="footer-social-link" href="https://www.linkedin.com/in/dylan-p3141592/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="footer-social-icon" src="headerImages/linkedin.png" alt="LinkedIn">
+          </a>
+          <a class="footer-social-link" href="https://github.com/burghporter314" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img class="footer-social-icon" src="headerImages/github.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
-	
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-	<!--
-	<script>
-	  $( document ).ready( function() {
-        $( '#myModal' ).modal( 'toggle' );
+  <script>
+    // Nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu   = document.getElementById('navMenu');
+    navToggle.addEventListener('click', function () {
+      navToggle.classList.toggle('is-open');
+      navMenu.classList.toggle('is-open');
+    });
+
+    // Scroll-spy: highlight active nav link
+    const spySections = document.querySelectorAll('section[id]');
+    const spyLinks    = document.querySelectorAll('.nav-link[href^="#"]');
+    const spyObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          spyLinks.forEach(function (l) { l.classList.remove('active'); });
+          var link = document.querySelector('.nav-link[href="#' + entry.target.id + '"]');
+          if (link) link.classList.add('active');
+        }
       });
-    </script>
-	-->
-	<script>
-	$(document).ready(function () {
-	$('#test').DataTable({
-		paging: true,
-		pageLength: 5
-	});
-	});
-	</script>
-  </body>
+    }, { threshold: 0.35 });
+    spySections.forEach(function (s) { spyObserver.observe(s); });
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-pane').forEach(function (p) { p.classList.remove('active'); });
+        this.classList.add('active');
+        document.getElementById(this.dataset.tab).classList.add('active');
+        // Re-observe new cards that just appeared
+        document.querySelectorAll('#' + this.dataset.tab + ' .animate-on-scroll').forEach(function (el) {
+          revealObserver.observe(el);
+        });
+      });
+    });
+
+    // DataTable
+    $(document).ready(function () {
+      $('#githubTable').DataTable({ pageLength: 5 });
+    });
+
+    // Scroll-reveal
+    const revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    window.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+        revealObserver.observe(el);
+      });
+    });
+  </script>
+
+</body>
 </html>

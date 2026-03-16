@@ -1,0 +1,527 @@
+/* =============================================
+   Dr. Dylan Porter — Shared Site Stylesheet
+   ============================================= */
+
+/* === Design Tokens === */
+:root {
+  --navy:        #0f172a;
+  --navy-light:  #1e293b;
+  --accent:      #2563eb;
+  --accent-hover:#1d4ed8;
+  --text:        #334155;
+  --text-muted:  #64748b;
+  --bg:          #f1f5f9;
+  --white:       #ffffff;
+  --border:      #e2e8f0;
+  --radius:      12px;
+  --shadow:      0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg:   0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* === Base === */
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  padding: 0;
+}
+
+/* =============================================
+   NAVBAR
+   ============================================= */
+.navbar.navbar-inverse {
+  background: var(--navy) !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.3px;
+  padding: 15px 20px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: rgba(255,255,255,0.75) !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 18px 15px;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+.navbar-inverse .navbar-nav > li.active > a,
+.navbar-inverse .navbar-nav > li.active > a:focus {
+  color: #fff !important;
+  background: transparent !important;
+  border-bottom: 2px solid var(--accent);
+}
+
+/* Social icons in navbar */
+.nav-social-link {
+  display: flex !important;
+  align-items: center;
+  padding: 12px 8px !important;
+}
+
+.nav-social-icon {
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 6px;
+  opacity: 0.80;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.nav-social-link:hover .nav-social-icon {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* =============================================
+   HERO / CAROUSEL
+   ============================================= */
+#myCarousel .carousel-inner img {
+  object-fit: cover;
+  max-height: 460px;
+  width: 100%;
+}
+
+#myCarousel .carousel-caption {
+  background: rgba(5, 15, 30, 0.6);
+  border-radius: var(--radius);
+  padding: 18px 28px;
+  bottom: 36px;
+  left: 10%;
+  right: 10%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#myCarousel .carousel-caption h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+#myCarousel .carousel-caption p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* =============================================
+   PAGE HERO (jumbotron replacement)
+   ============================================= */
+.page-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  margin-bottom: 32px;
+  margin-top: 20px;
+  box-shadow: var(--shadow);
+}
+
+.page-hero h2 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.page-hero p {
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 0;
+  font-size: 15px;
+}
+
+/* =============================================
+   ALERT BANNER
+   ============================================= */
+.alert-welcome {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius);
+  color: #1e40af;
+  padding: 14px 20px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* =============================================
+   SECTION DIVIDER / HEADING
+   ============================================= */
+.section-intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.section-intro img {
+  border-radius: 10px;
+  border: 2px solid var(--border);
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.section-intro h4 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.section-intro p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* =============================================
+   PANEL / ACCORDION (modernized)
+   ============================================= */
+.panel-modern {
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.panel-modern .panel-heading {
+  background: var(--white) !important;
+  border-bottom: 1px solid var(--border) !important;
+  padding: 0 !important;
+}
+
+.panel-modern .panel-heading a {
+  display: block;
+  padding: 16px 20px !important;
+  color: var(--navy) !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  text-decoration: none !important;
+  transition: background 0.15s;
+}
+
+.panel-modern .panel-heading a:hover {
+  background: #f8fafc !important;
+}
+
+.panel-modern .panel-body {
+  background: var(--white);
+  padding: 24px !important;
+}
+
+/* =============================================
+   CARDS (thumbnail replacement)
+   ============================================= */
+.card-modern {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s;
+  height: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+}
+
+.card-modern:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.card-modern .card-img-wrap {
+  background: #f8fafc;
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.card-modern .card-img-wrap img {
+  max-height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.card-modern .card-body {
+  padding: 20px;
+}
+
+.card-modern .card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.card-modern .card-body .card-meta {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn-accent {
+  background: var(--accent);
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: background 0.2s, transform 0.15s;
+  display: inline-block;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  background: var(--accent-hover);
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+.btn-accent-sm {
+  padding: 5px 12px;
+  font-size: 12px;
+}
+
+.btn-accent[disabled],
+.btn-accent.disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =============================================
+   GITHUB SECTION
+   ============================================= */
+.github-section-intro {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.github-section-intro img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.github-section-intro h4 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.github-section-intro p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.github-section-intro a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* =============================================
+   DATA TABLE
+   ============================================= */
+#test thead th {
+  background: var(--navy) !important;
+  color: #fff !important;
+  font-weight: 600;
+  border: none !important;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+#test tbody td {
+  vertical-align: middle;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+#test tbody td a {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+#test tbody td a:hover {
+  color: var(--accent-hover);
+}
+
+#test tbody tr:hover {
+  background: #f0f7ff !important;
+}
+
+.dataTables_wrapper .dataTables_filter input,
+.dataTables_wrapper .dataTables_length select {
+  border-radius: 8px !important;
+  border: 1px solid var(--border) !important;
+  padding: 5px 10px !important;
+  color: var(--text) !important;
+}
+
+/* =============================================
+   AI LAB PAGE
+   ============================================= */
+.lab-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  margin-bottom: 28px;
+}
+
+.lab-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.lab-section p {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.lab-result {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--text);
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+/* PDF Drop card */
+.pdf-card-modern {
+  border: 2px dashed var(--accent);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  background: #f0f7ff;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  color: var(--text-muted);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.pdf-card-modern.dragover {
+  background: #dbeafe;
+  border-color: var(--accent-hover);
+}
+
+/* =============================================
+   PAPERS PAGE
+   ============================================= */
+.papers-grid .card-body .btn-group-paper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.9);
+  padding: 48px 0 32px;
+  margin-top: 60px;
+}
+
+.site-footer h3 {
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.3px;
+}
+
+.site-footer hr {
+  border-color: rgba(255,255,255,0.15);
+  margin-bottom: 24px;
+}
+
+.site-footer .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.site-footer .contact-item .glyphicon {
+  color: var(--accent);
+  font-size: 16px;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.site-footer .copyright {
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =============================================
+   RESUME PAGE OVERRIDES
+   ============================================= */
+.resume-wrapper-outer {
+  background: var(--bg);
+  padding: 20px 0 40px;
+}
+
+/* =============================================
+   UTILITIES
+   ============================================= */
+.mt-section { margin-top: 40px; }
+.mb-section { margin-bottom: 40px; }
+.section-gap { height: 32px; }
+
+@media (max-width: 767px) {
+  .page-hero { padding: 24px 20px; }
+  .lab-section { padding: 20px; }
+  #myCarousel .carousel-caption { left: 5%; right: 5%; }
+}

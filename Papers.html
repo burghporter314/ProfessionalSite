@@ -1,166 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Dylan's Website</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing Samples | Dr. Dylan Porter</title>
 
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="css/redesign.css" rel="stylesheet">
+</head>
+<body>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  <style>
-  .affix {
-      top: 0;
-      width: 100%;
-  }
-
-  .affix + .container-fluid {
-      padding-top: 70px;
-  }
-  body {
-    padding:0px;
-  }
-  .navbar-nav.navbar-right {
-    white-space: nowrap; /* prevents wrapping */
-  }
-
-  .navbar-nav.navbar-right li {
-    display: inline-flex;
-    align-items: center;
-  }
-
-  </style>
-  </head>
-  <body style="">
-
-    <nav class="navbar navbar-inverse" style="z-index:16; border-radius:0px;margin-bottom:0px;" data-spy="affix" data-offset-top="197" style="margin-bottom:10px;">
-      <div class="container-fluid">
-
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>                        
-          </button>
-          <a class="navbar-brand" href="#">Writing Samples</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class=""><a href="index.html">Home</a></li>
-            <li><a href="resume.html">Resume</a></li>
-            <li class="active"><a href="papers.html">Writing Samples</a></li>
-            <li><a href="ailab.html">AI Laboratory</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right" style="margin-bottom:0px;">
-              <li>
-                <a target="_new" href="https://www.linkedin.com/in/dylan-p3141592/" style = "padding:0px; margin:0px; margin-right:5px">
-                  <img src="headerImages/linkedin.png" style="height:50px;padding:0px; margin:0px;">
-                </a>
-              </li>
-              <li>
-                <a target="_new" href="https://github.com/burghporter314" style = "padding:0px; margin:0px; margin-right:-10px">
-                  <img src="headerImages/github.png" style="height:50px; padding:0px; margin: 0px;">
-                </a>
-              </li>
-            </ul>
-	  	  <!--
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-		  </ul>-->
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">Dr. Dylan Porter</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="resume.html">Resume</a></li>
+          <li><a class="nav-link active" href="papers.html">Writing</a></li>
+        </ul>
+        <div class="nav-social">
+          <a class="nav-social-link" href="https://www.linkedin.com/in/dylan-p3141592/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="nav-social-icon" src="headerImages/linkedin.png" alt="LinkedIn">
+          </a>
+          <a class="nav-social-link" href="https://github.com/burghporter314" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img class="nav-social-icon" src="headerImages/github.png" alt="GitHub">
+          </a>
         </div>
       </div>
-    </nav>
-    <br>
-    <!-- Page Content -->
-    <div class="container">
+    </div>
+  </nav>
 
-        <!-- Page Heading -->
-		
-        <header class="jumbotron hero-spacer" style="padding:15px;">
-            <h2>Welcome!</h2>
-            <p>Scroll down to access my publicly available research.</p>
-        </header>
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="section-tag">Research &amp; Publications</div>
+    <h1>Writing <span class="gradient-text">Samples</span></h1>
+    <p class="page-hero-sub">Publicly available research papers, technical proposals, and publications.</p>
+  </section>
 
-        <!-- /.row -->
+  <!-- Papers Section -->
+  <section class="site-section">
+    <div class="section-inner">
+      <div class="cards-grid-2">
 
-        <!-- Page Features -->
-        <div class="row text-center" id= "stories">
-		
-            <div class="col-md-6 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/psu.jpg" alt="">
-                    <div class="caption">
-                        <h3>Praxis</h3>
-                        <p>Doctor of Engineering</p>
-                        <p>
-                            <a target="_new" href="Files/Papers/PRAXIS.pdf" class="btn btn-primary">View Paper</a>
-                        </p>
-                    </div>
-                </div>
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/psu.jpg" alt="Penn State University">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Praxis</h3>
+            <p class="card-meta">PSU Repository &bull; Doctor of Engineering</p>
+            <div class="card-actions">
+              <a href="Files/Papers/PRAXIS.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
             </div>
-
-            <div class="col-md-6 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/psu.jpg" alt="">
-                    <div class="caption">
-                        <h3>Technical Proposals</h3>
-                        <p>Master of Software Engineering</p>
-                        <p>
-                            <div class="row">
-                            <a target="_new" href="Files/Papers/DATABASE_SPEC.pdf"  class="btn btn-primary">D.B.</a> 
-                            <a target="_new" href="Files/Papers/ARCH_AND_DESIGN.pdf"  class="btn btn-primary">Design</a> 
-                            <a target="_new" href="Files/Papers/SRS.pdf"  class="btn btn-primary">SRS</a> 
-                            <a target="_new" href="Files/Papers/TESTING.pdf"  class="btn btn-primary">Test</a> 
-                            </div>
-                        </p>
-                    </div>
-                </div>
-            </div>
-			
-
+          </div>
         </div>
 
-        <div class="row text-center" id= "stories2">
-            <div class="col-md-6 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/nasa.jpg" alt="">
-                    <div class="caption">
-                        <h3>ARQM Validation</h3>
-                        <p>NASA</p>
-                        <p>
-                            <a target="_new" href="Files/Papers/NASA_JOURNAL.pdf" class="btn btn-primary">View Paper</a>
-                        </p>
-                    </div>
-                </div>
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/psu.jpg" alt="Penn State University">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Technical Proposals</h3>
+            <p class="card-meta">PSU Repository &bull; Master of Software Engineering</p>
+            <div class="card-actions">
+              <a href="Files/Papers/DATABASE_SPEC.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Database</a>
+              <a href="Files/Papers/ARCH_AND_DESIGN.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Design</a>
+              <a href="Files/Papers/SRS.pdf" target="_blank" rel="noopener" class="btn-glass-sm">SRS</a>
+              <a href="Files/Papers/TESTING.pdf" target="_blank" rel="noopener" class="btn-glass-sm">Testing</a>
             </div>
-
-            <div class="col-md-6 col-sm-6 hero-feature">
-                <div class="thumbnail">
-                    <img src="ProjectImages/ieee.png" alt="">
-                    <div class="caption">
-                        <h3>Requirement Automation</h3>
-                        <p>IEEE Computer</p>
-                        <p>
-                            <a target="_new" href="Files/Papers/COMPUTER_MAGAZINE.pdf"  class="btn btn-primary">View Paper</a> 
-                        </p>
-                    </div>
-                </div>
-            </div>
-
+          </div>
         </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-  </body>
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/nasa.jpg" alt="NASA">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">ARQM Validation</h3>
+            <p class="card-meta">NASA</p>
+            <div class="card-actions">
+              <a href="Files/Papers/NASA_JOURNAL.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card animate-on-scroll">
+          <div class="card-image">
+            <img src="ProjectImages/ieee.png" alt="IEEE">
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Requirement Automation</h3>
+            <p class="card-meta">IEEE Computer</p>
+            <div class="card-actions">
+              <a href="Files/Papers/COMPUTER_MAGAZINE.pdf" target="_blank" rel="noopener" class="btn-glow">View Paper</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-brand-name">Dr. Dylan Porter</div>
+          <p class="footer-tagline">Software Engineer, AI Researcher, and Doctor of Engineering building scalable systems at the frontier of technology.</p>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Navigation</div>
+          <nav class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="papers.html">Writing Samples</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#128205;</span>
+              Pittsburgh, PA
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#128222;</span>
+              412-735-1652
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon">&#9993;</span>
+              burghporter314@gmail.com
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Dr. Dylan Porter. All rights reserved.</p>
+        <div class="footer-socials">
+          <a class="footer-social-link" href="https://www.linkedin.com/in/dylan-p3141592/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img class="footer-social-icon" src="headerImages/linkedin.png" alt="LinkedIn">
+          </a>
+          <a class="footer-social-link" href="https://github.com/burghporter314" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img class="footer-social-icon" src="headerImages/github.png" alt="GitHub">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu   = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', function () {
+      navToggle.classList.toggle('is-open');
+      navMenu.classList.toggle('is-open');
+    });
+
+    // Scroll-reveal
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    window.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.animate-on-scroll').forEach(function (el) {
+        observer.observe(el);
+      });
+    });
+  </script>
+
+</body>
 </html>
