@@ -19,9 +19,6 @@
   <nav class="site-nav" id="siteNav">
     <div class="nav-inner">
       <a class="nav-brand" href="#hero">DP</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
       <div class="nav-menu" id="navMenu">
         <ul class="nav-links">
           <li><a class="nav-link" href="#about">About</a></li>
@@ -39,6 +36,14 @@
           </a>
         </div>
       </div>
+      <!-- Theme toggle -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -98,7 +103,7 @@
         <div class="about-left">
           <div class="section-tag">About</div>
           <h2 class="section-title" style="text-align:left; margin-bottom:18px;">Career Profile</h2>
-          <p class="about-bio">Doctor of Engineering with 7+ years of experience delivering scalable systems across healthcare, defense, and enterprise sectors. Researcher and practitioner with expertise in artificial intelligence, requirements engineering, and the full software development lifecycle. Published author in IEEE Computer.</p>
+          <p class="about-bio">Doctor of Engineering with 7+ years building software across healthcare, defense, and enterprise. I work at the intersection of AI and software engineering, with a focus on automating requirements analysis. Published author in IEEE Computer.</p>
 
           <div class="skills-block">
             <div class="skill-group">
@@ -187,8 +192,8 @@
               <div class="exp-dates">Jan 2022 – Oct 2025</div>
             </div>
             <ul class="exp-bullets">
-              <li>Developed and modernized enterprise healthcare applications serving thousands of hospital system users, enhancing CDI workflows and reducing bugs across clinical tooling.</li>
-              <li>Led CI/CD modernization enabling daily deployments (up from weekly) and integrated content tools with 360 Encompass, reducing audit cycle manual effort by 3 days for 200+ clinicians.</li>
+              <li>Built and maintained healthcare software used daily by thousands of clinicians across hospital networks.</li>
+              <li>Automated deployments to ship updates daily instead of weekly, and connected internal tools that saved 200+ clinicians 3 days of manual work per audit cycle.</li>
             </ul>
           </div>
         </div>
@@ -204,8 +209,8 @@
               <div class="exp-dates">Jun 2019 – Jan 2022</div>
             </div>
             <ul class="exp-bullets">
-              <li>Built real-time logistics applications for 300+ military users, cutting data processing time by 30% and reducing critical deployment errors by 20%.</li>
-              <li>Automated PaaS deployment pipelines with Terraform, Terragrunt, and Ansible — generating $50K in yearly infrastructure savings and improving system reliability by 25%.</li>
+              <li>Built logistics applications used by 300+ military personnel, making data processing 30% faster and deployments 20% more reliable.</li>
+              <li>Automated cloud infrastructure setup, saving $50K per year and improving system uptime by 25%.</li>
             </ul>
           </div>
         </div>
@@ -221,7 +226,7 @@
               <div class="exp-dates">Jun 2018 – Aug 2018</div>
             </div>
             <ul class="exp-bullets">
-              <li>Modernized batch data processing pipelines for clinical data from remote sites, improving ingestion speed by 3× and reducing processing errors by 20%.</li>
+              <li>Rebuilt data pipelines that process patient records from remote clinics — 3× faster with 20% fewer errors.</li>
             </ul>
           </div>
         </div>
@@ -237,7 +242,7 @@
               <div class="exp-dates">May 2017 – Aug 2017</div>
             </div>
             <ul class="exp-bullets">
-              <li>Engineered an automated donor-recipient matching system, improving match rates and decreasing manual reconciliation time by 10%.</li>
+              <li>Built an automated system to match organ donors with recipients, reducing manual coordination time by 10%.</li>
             </ul>
           </div>
         </div>
@@ -252,7 +257,7 @@
       <div class="section-header">
         <div class="section-tag">Research &amp; Writing</div>
         <h2 class="section-title">Publications &amp; Papers</h2>
-        <p class="section-subtitle">Peer-reviewed research, technical proposals, and published work.</p>
+        <p class="section-subtitle">Published papers, peer-reviewed articles, and technical writing samples.</p>
       </div>
 
       <div class="tab-bar">
@@ -375,7 +380,7 @@
       <div class="section-header">
         <div class="section-tag">Code</div>
         <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Open-source tools and applications built for research and production use.</p>
+        <p class="section-subtitle">Tools and applications built for research and real-world use.</p>
       </div>
       <div class="cards-grid-3">
 
@@ -475,7 +480,7 @@
 
         <div class="footer-col">
           <div class="footer-brand-name">Dr. Dylan Porter</div>
-          <p class="footer-tagline">Software Engineer, AI Researcher, and Doctor of Engineering building scalable systems at the frontier of technology.</p>
+          <p class="footer-tagline">Software Engineer and AI Researcher with a Doctor of Engineering from Penn State.</p>
         </div>
 
         <div class="footer-col">
@@ -524,6 +529,26 @@
   </footer>
 
   <script>
+    // Theme toggle — persisted to localStorage
+    (function () {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var btn = document.getElementById('themeToggle');
+      btn.addEventListener('click', function () {
+        var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+    });
+
     // Nav toggle
     const navToggle = document.getElementById('navToggle');
     const navMenu   = document.getElementById('navMenu');
