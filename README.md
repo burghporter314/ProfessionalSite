@@ -25,9 +25,7 @@
 
 | Light Mode | Dark Mode |
 |:---:|:---:|
-| ![Light Mode](https://raw.githubusercontent.com/burghporter314/ProfessionalSite/master/ProjectImages/psu.jpg) | ![Dark Mode](https://raw.githubusercontent.com/burghporter314/ProfessionalSite/master/ProjectImages/nasa.jpg) |
-
-> Replace the above with actual screenshots after first deploy. Recommended tool: [Screely](https://www.screely.com/)
+| ![Light Mode](img_lite.png) | ![Dark Mode](img_dark.png) |
 
 </div>
 
